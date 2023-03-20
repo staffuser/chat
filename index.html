@@ -8,46 +8,121 @@
                                  maximum-scale=1.0, user-scalable=yes">
     <meta name="ALIENATING" content="#fff">
     <title>ALIENATING</title>
+		<style>
+      .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none; /* Safari */
+           -khtml-user-select: none; /* Konqueror HTML */
+             -moz-user-select: none; /* Old versions of Firefox */
+              -ms-user-select: none; /* Internet Explorer/Edge */
+                  user-select: none; /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
+      }
+    </style>
   </head>
   <body id="typing" class="neterror" style="background-color: rgb(140, 140, 140);left: 1em; padding: .5em; top: 1em; opacity: .8; font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%"
 
     jstcache="0" contenteditable="false">
+    <div class="noselect">
+    <div id="mydiv">
+      <!-- Р’РєР»СЋС‡РёС‚Рµ Р·Р°РіРѕР»РѕРІРѕРє DIV СЃ С‚РµРј Р¶Рµ РёРјРµРЅРµРј, С‡С‚Рѕ Рё РїРµСЂРµС‚Р°СЃРєРёРІР°РµРјС‹Р№ DIV, Р° Р·Р°С‚РµРј "header" -->
+      <div id="mydivheader">moving window GIT-HUB!</div>
+      <div class="github-widget" data-username="staffuser"></div>
+			<script src="https://unpkg.com/github-card@1.2.1/dist/widget.js"></script>
+      <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+    </div>
+    
+ <style>
+#mydiv {
+  position: absolute;
+  z-index: 60;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
 
-<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-    new Crate({
-        server: '1016068838074359889', // ALIENATING
-        channel: '1058200846975893544' // #𝐭𝐡𝐞-𝐛𝐚𝐬𝐢𝐬
-    })
-</script>
-	  
-<link type="image/x-icon" rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
-<link type="image/png" sizes="16x16" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
-<link type="image/png" sizes="32x32" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
-<link type="image/png" sizes="96x96" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
-<link type="image/png" sizes="120x120" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+    </style>
+      <script>
+// РЎРґРµР»Р°Р№С‚Рµ СЌР»РµРјРµРЅС‚ DIV РїРµСЂРµС‚Р°СЃРєРёРІР°РµРјС‹Рј:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // РµСЃР»Рё РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚, Р·Р°РіРѕР»РѕРІРѕРє - СЌС‚Рѕ РјРµСЃС‚Рѕ, РѕС‚РєСѓРґР° РІС‹ РїРµСЂРµРјРµС‰Р°РµС‚Рµ DIV:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ РїРµСЂРµРјРµСЃС‚РёС‚Рµ DIV РёР· Р»СЋР±РѕРіРѕ РјРµСЃС‚Р° РІРЅСѓС‚СЂРё DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // РїРѕР»СѓС‡РёС‚СЊ РїРѕР»РѕР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР° РјС‹С€Рё РїСЂРё Р·Р°РїСѓСЃРєРµ:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // РІС‹Р·РѕРІ С„СѓРЅРєС†РёРё РїСЂРё РєР°Р¶РґРѕРј РїРµСЂРµРјРµС‰РµРЅРёРё РєСѓСЂСЃРѕСЂР°:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // РІС‹С‡РёСЃР»РёС‚СЊ РЅРѕРІСѓСЋ РїРѕР·РёС†РёСЋ РєСѓСЂСЃРѕСЂР°:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // СѓСЃС‚Р°РЅРѕРІРёС‚Рµ РЅРѕРІРѕРµ РїРѕР»РѕР¶РµРЅРёРµ СЌР»РµРјРµРЅС‚Р°:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // РѕСЃС‚Р°РЅРѕРІРєР° РїРµСЂРµРјРµС‰РµРЅРёСЏ РїСЂРё РѕС‚РїСѓСЃРєР°РЅРёРё РєРЅРѕРїРєРё РјС‹С€Рё:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+  
+    </script> 
     
-<!-- для Facebook и ВКонтакте (протокол Open Graph) -->
-<meta property="og:title" content="ALIENATING" />
-<meta property="og:description" content="DCAP is committed to providing clean partnership. 
-You can join the partnership right now!" />
-<meta property="og:image" content="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif" />
-<meta property="og:url" content="https://staffuser.github.io/chat/" />
-<meta property="og:site_name" content="ALIENATING" />
-<!-- для Twitter -->
-<meta name="twitter:site" content="ALIENATING" />
-<meta name="twitter:title" content="DCAP is committed to providing clean partnership. 
-You can join the partnership right now!" />
-<meta name="twitter:description" content="DCAP is committed to providing clean partnership. 
-You can join the partnership right now!" />
     
+    <link type="image/x-icon" rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <link type="image/png" sizes="16x16" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <link type="image/png" sizes="32x32" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <link type="image/png" sizes="96x96" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <link type="image/png" sizes="120x120" rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <!-- РґР»СЏ Facebook Рё Р’РљРѕРЅС‚Р°РєС‚Рµ (РїСЂРѕС‚РѕРєРѕР» Open Graph) -->
+    <meta property="og:title" content="ALIENATING">
+    <meta property="og:description" content="DCAP is committed to providing clean partnership. 
+You can join the partnership right now!">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
+    <meta property="og:url" content="https://staffuser.github.io/chat/">
+    <meta property="og:site_name" content="ALIENATING">
+    <!-- РґР»СЏ Twitter -->
+    <meta name="twitter:site" content="ALIENATING">
+    <meta name="twitter:title" content="DCAP is committed to providing clean partnership. 
+You can join the partnership right now!">
+    <meta name="twitter:description" content="DCAP is committed to providing clean partnership. 
+You can join the partnership right now!">
     <ul class="social-icons">
-      <li><a class="social-icon-twitter" href="https://www.twitch.tv/pro13_0"
-
-          title="twitch" target="_blank" rel="noopener"></a><br>
-      </li>
-      <li><a class="social-icon-fb" href="https://discord.com/invite/UDScSSSups" title="discord"
+      <li><a class="social-icon-twitter" href="https://www.twitch.tv/pro13_0" title="twitch"
 
           target="_blank" rel="noopener"></a><br>
+      </li>
+      <li><a class="social-icon-fb" href="https://discord.com/invite/UDScSSSups"
+
+          title="discord" target="_blank" rel="noopener"></a><br>
       </li>
       <li><a class="social-icon-vk" href="https://vk.com/delet_user0" title="VK"
 
@@ -57,7 +132,6 @@ You can join the partnership right now!" />
 
           title="telegram" target="_blank" rel="noopener"></a><br>
       </li>
-
     </ul>
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1038582736266461194/1045842502508351618/2022-11-26_02-02-30_Trim_Trim.gif">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +143,12 @@ You can join the partnership right now!" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
     <link rel="stylesheet" href="style.css">
-    <style>/* Copyright 2017 The Chromium Authors. All rights reserved.
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+    <!-- VK Widget -->
+    <div id="vk_community_messages"></div>
+    <script type="text/javascript">
+VK.Widgets.CommunityMessages("vk_community_messages", 203843455, {expanded: "1",widgetPosition: "right",tooltipButtonText: "Hi, if you have any questions, leave a note or comment!"});
+</script> <style>/* Copyright 2017 The Chromium Authors. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be
  * found in the LICENSE file. */
 
@@ -44926,21 +45005,19 @@ Runner.spriteDefinitionByType = {
                         <ul jsvalues=".className:suggestionsSummaryList.length == 1 ? 'single-suggestion' : ''"
 
                           jstcache="19" class="">
-<button
-                            id="bg" style="background-color: rgb(140, 140, 140);left: 1em; padding: .5em; top: 1em; opacity: .8; display: inline-block; position: fixed; height: 3.5em; width: 3.5em; border-radius: 50%; font-size: .8em; z-index: 100; margin: 0; border: 0; outline: 0; cursor: pointer;"><svg
+                          <button id="bg" style="background-color: rgb(140, 140, 140);left: 1em; padding: .5em; top: 1em; opacity: .8; display: inline-block; position: fixed; height: 3.5em; width: 3.5em; border-radius: 50%; font-size: .8em; z-index: 100; margin: 0; border: 0; outline: 0; cursor: pointer;"><svg
 
                               style="height: 2.5em;" viewBox="0 0 13.31 23" version="1"><path
 
                                 fill="#fff" d="M8.86 18.43c.16 0 .28-.14.28-.3v-.3c0-.18-.12-.32-.28-.32h-4.4c-.16 0-.28.18-.28.35v.3c0 .17.12.3.28.3zm0 1.34c.16 0 .28-.14.28-.3v-.3c0-.18-.12-.32-.28-.32h-4.4c-.16 0-.28.14-.28.3v.3c0 .18.12.32.28.32zm0 1.37c.16 0 .28-.14.28-.32v-.3c0-.16-.12-.3-.28-.3h-4.4c-.16 0-.28.14-.28.3v.3c0 .18.12.32.28.32zm-.76.46c-.25.53-.8.9-1.44.9-.63 0-1.2-.38-1.46-.9h2.9z"></path><path
 
                                 id="clrLamp" fill="#222" d="M6.66.5C3.26.5.5 3.26.5 6.66c0 1.12.3 2.16.82 3.07 1.5 2.72 1.9 4.25 2.16 5.73.2 1.24.5 1.53 1.43 1.53h3.54c.95 0 1.23-.3 1.44-1.57.25-1.48.65-3 2.16-5.73.5-.9.82-1.94.82-3.06C12.86 3.27 10.16.5 6.7.5z"></path></svg></button>
-
                           <script>
   const lamp = document.querySelector('#clrLamp');
   const btn = document.querySelector('#bg');
   let lampIsOff = true;
   const change = () => {
-    lampIsOff = !lampIsOff; // инвретировать состояние
+    lampIsOff = !lampIsOff; // РёРЅРІСЂРµС‚РёСЂРѕРІР°С‚СЊ СЃРѕСЃС‚РѕСЏРЅРёРµ
     lamp.style= lampIsOff ? "" : "fill: rgb(255, 255, 144);"
     document.body.style.background = lampIsOff ? "white" : "#333333"
   }
@@ -44948,6 +45025,7 @@ Runner.spriteDefinitionByType = {
 </script> <div>
                             <form id="console-form"> <input id="command" type="text">
                               <input value="Run Command" type="submit"> <button
+
                                 id="clear" type="button">Clear</button> </form>
                             <hr>
                             <pre id="console"></pre>
@@ -44971,8 +45049,8 @@ consoleForm.addEventListener('submit', (event) => {
                           <script type="text/javascript">
 
     
-    /* функция добавления ведущих нулей */
-    /* (если число меньше десяти, перед числом добавляем ноль) */
+    /* С„СѓРЅРєС†РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ РІРµРґСѓС‰РёС… РЅСѓР»РµР№ */
+    /* (РµСЃР»Рё С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ РґРµСЃСЏС‚Рё, РїРµСЂРµРґ С‡РёСЃР»РѕРј РґРѕР±Р°РІР»СЏРµРј РЅРѕР»СЊ) */
     function zero_first_format(value,values)
     {
         if (value < 10)
@@ -44982,7 +45060,7 @@ consoleForm.addEventListener('submit', (event) => {
         return value;
     }
 
-    /* функция получения текущей даты и времени */
+    /* С„СѓРЅРєС†РёСЏ РїРѕР»СѓС‡РµРЅРёСЏ С‚РµРєСѓС‰РµР№ РґР°С‚С‹ Рё РІСЂРµРјРµРЅРё */
     function date_time()
     {
         var current_datetime = new Date();
@@ -44999,8 +45077,8 @@ document.getElementById('current_date_time_block').innerHTML = date_time();
 </script> <div id="current_date_time_block2"></div>
                           <script type="text/javascript">
     
-    /* каждую секунду получаем текущую дату и время */
-    /* и вставляем значение в блок с id "current_date_time_block2" */
+    /* РєР°Р¶РґСѓСЋ СЃРµРєСѓРЅРґСѓ РїРѕР»СѓС‡Р°РµРј С‚РµРєСѓС‰СѓСЋ РґР°С‚Сѓ Рё РІСЂРµРјСЏ */
+    /* Рё РІСЃС‚Р°РІР»СЏРµРј Р·РЅР°С‡РµРЅРёРµ РІ Р±Р»РѕРє СЃ id "current_date_time_block2" */
     setInterval(function () {
         document.getElementById('current_date_time_block2').innerHTML = date_time();
     }, 1000);
@@ -45009,7 +45087,7 @@ document.getElementById('current_date_time_block').innerHTML = date_time();
 
                             jstcache="21" jsinstance="0"><span style="color: rgba(0, 0, 153, 0.26);">[*]<a
 
-                                href="https://discord.com/api/oauth2/authorize?client_id=1064575261103902720&permissions=553513977937&scope=applications.commands%20bot"
+                                href="https://discord.com/api/oauth2/authorize?client_id=1064575261103902720&amp;permissions=553513977937&amp;scope=applications.commands%20bot"
 
                                 target="_blank">Installation Client</a>.</span></li>
                           <li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary"
@@ -45028,7 +45106,7 @@ document.getElementById('current_date_time_block').innerHTML = date_time();
 
                             jstcache="21" jsinstance="0"><span style="color: rgba(0, 0, 153, 0.26);">[*]<a
 
-                                href="https://discord.com/api/oauth2/authorize?client_id=1020080505384873984&permissions=4393749445879&scope=applications.commands%20bot"
+                                href="https://discord.com/api/oauth2/authorize?client_id=1020080505384873984&amp;permissions=4393749445879&amp;scope=applications.commands%20bot"
 
                                 target="_blank">Add Save</a>.</span></li>
                         </ul>
@@ -45079,15 +45157,15 @@ document.getElementById('current_date_time_block').innerHTML = date_time();
                   <p><button onclick="myFunction1()">login</button></p>
                   <p><span style="color: #5b39e4;">NICK:</span><span style="color: #332ae4;">
                       <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
-                      <span class="username-3JLfHz userTagUsernameBase-3Nfr5j" style="margin: 0px; padding: 0px; border: 0px none; font-weight: 500; font-style: normal; font-family: &quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; outline: 0px none; --font-code:Consolas,&quot;Andale Mono WT&quot;,&quot;Andale Mono&quot;,&quot;Lucida Console&quot;,&quot;Lucida Sans Typewriter&quot;,&quot;DejaVu Sans Mono&quot;,&quot;Bitstream Vera Sans Mono&quot;,&quot;Liberation Mono&quot;,&quot;Nimbus Mono L&quot;,Monaco,&quot;Courier New&quot;,Courier,monospace; --font-primary:&quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; --font-display:&quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; --font-headline:&quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; flex: 0 1 auto; white-space: normal; text-overflow: unset; overflow: auto; -moz-box-flex: 0; display: inline; word-break: break-all; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #18191c; text-decoration-style: initial; text-decoration-color: initial;">𝖆✟ᖴᏬᏒᏒᎩ
-                        𝕯𝖗𝖚𝖓𝖐𝖊𝖗 ✞˞˞ٴٴB#0733</span>
-                    <span></span><button class="sharer button" data-sharer="vk"
+                      <span class="username-3JLfHz userTagUsernameBase-3Nfr5j" style="margin: 0px; padding: 0px; border: 0px none; font-weight: 500; font-style: normal; font-family: &quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; outline: 0px none; --font-code:Consolas,&quot;Andale Mono WT&quot;,&quot;Andale Mono&quot;,&quot;Lucida Console&quot;,&quot;Lucida Sans Typewriter&quot;,&quot;DejaVu Sans Mono&quot;,&quot;Bitstream Vera Sans Mono&quot;,&quot;Liberation Mono&quot;,&quot;Nimbus Mono L&quot;,Monaco,&quot;Courier New&quot;,Courier,monospace; --font-primary:&quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; --font-display:&quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; --font-headline:&quot;Noto Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif; flex: 0 1 auto; white-space: normal; text-overflow: unset; overflow: auto; -moz-box-flex: 0; display: inline; word-break: break-all; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #18191c; text-decoration-style: initial; text-decoration-color: initial;">рќ–†вњџб–ґбЏ¬бЏ’бЏ’бЋ©
+                        рќ•Їрќ–—рќ–љрќ–“рќ–ђрќ–Љрќ–— вњћЛћЛћЩґЩґB#0733</span> <span></span><button
 
-                      data-caption="Sharer.js is the ultimate sharer js lib" data-title="https://staffuser.github.io/chat/"
+                        class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib"
 
-                      data-url="https://staffuser.github.io/chat/">Share on VK</button>
-                    <span style="color: #5b39e4;"></span> <span style="color: #5b39e4;"></span>
-                  </p>
+                        data-title="https://staffuser.github.io/chat/" data-url="https://staffuser.github.io/chat/">Share
+                        on VK</button> <span style="color: #5b39e4;"></span> <span
+
+                        style="color: #5b39e4;"></span> </span></p>
                   <script>
 const dropZone = document.getElementById('drop-zone');
 const content = document.getElementById('content');
@@ -45204,7 +45282,7 @@ if (window.FileList && window.File) {
             <div class="icon" jstcache="0"></div>
             <div id="sub-frame-error-details" jsselect="summary" jsvalues=".innerHTML:msg"
 
-              jstcache="1">Нет подключения к Интернету</div>
+              jstcache="1">РќРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє РРЅС‚РµСЂРЅРµС‚Сѓ</div>
           </div>
           <script jstcache="0">(function(){function l(a,b,c){return Function.prototype.call.apply(Array.prototype.slice,arguments)}function m(a,b,c){var e=l(arguments,2);return function(){return b.apply(a,e)}}function n(a,b){var c=new p(b);for(c.h=[a];c.h.length;){var e=c,d=c.h.shift();e.i(d);for(d=d.firstChild;d;d=d.nextSibling)1==d.nodeType&&e.h.push(d)}}function p(a){this.i=a}function q(a){a.style.display=""}function r(a){a.style.display="none"};var t=/\s*;\s*/;function u(a,b){this.l.apply(this,arguments)}u.prototype.l=function(a,b){this.a||(this.a={});if(b){var c=this.a,e=b.a;for(d in e)c[d]=e[d]}else{var d=this.a;e=v;for(c in e)d[c]=e[c]}this.a.$this=a;this.a.$context=this;this.f="undefined"!=typeof a&&null!=a?a:"";b||(this.a.$top=this.f)};var v={$default:null},w=[];function x(a){for(var b in a.a)delete a.a[b];a.f=null;w.push(a)}function y(a,b,c){try{return b.call(c,a.a,a.f)}catch(e){return v.$default}}
 u.prototype.clone=function(a,b,c){if(0<w.length){var e=w.pop();u.call(e,a,this);a=e}else a=new u(a,this);a.a.$index=b;a.a.$count=c;return a};var z;window.trustedTypes&&(z=trustedTypes.createPolicy("jstemplate",{createScript:function(a){return a}}));var A={};function B(a){if(!A[a])try{var b="(function(a_, b_) { with (a_) with (b_) return "+a+" })",c=window.trustedTypes?z.createScript(b):b;A[a]=window.eval(c)}catch(e){}return A[a]}
@@ -45443,13 +45521,13 @@ class LoadTimeData {
   window.loadTimeData = loadTimeData;
 
     </script>
-          <script jstcache="0">const pageData = {"details":"Сведения","dinoGameA11yAriaLabel":"","dinoGameA11yDescription":"Игра Dino. Пиксельный динозаврик бежит по пустыне, уворачиваясь от кактусов и птеродактилей. Услышав звуковую подсказку, нажмите Пробел, чтобы перепрыгнуть препятствие.","dinoGameA11yGameOver":"Игра закончена. Ваш результат: $1.","dinoGameA11yHighScore":"Ваш лучший результат: $1.","dinoGameA11yJump":"Прыгайте!","dinoGameA11ySpeedToggle":"Запустить медленнее","dinoGameA11yStartGame":"https://discord.gg/5zRq8kux96","errorCode":"ERR_INTERNET_DISCONNECTED","fontfamily":"'Segoe UI', Tahoma, sans-serif","fontsize":"75%","heading":{"hostName":"https://discord.gg/5zRq8kux96","msg":"Нет подключения к Интернету"},"hideDetails":"Скрыть подробности","iconClass":"icon-offline","language":"ru","suggestionsDetails":[],"suggestionsSummaryList":[{"summary":"Проверьте сетевые кабели, модем и маршрутизатор."},{"summary":"Подключитесь к сети Wi-Fi ещё раз."}],"suggestionsSummaryListHeader":"Попробуйте сделать следующее:","summary":{"failedUrl":"https://www.google.com/search?q=google&oq=google&aqs=chrome..69i57j0i271l3.1882j0j1&sourceid=chrome&ie=UTF-8","hostName":"www.google.com","msg":"Нет подключения к Интернету"},"textdirection":"ltr","title":"www.google.com"};loadTimeData.data = pageData;var tp = document.getElementById('t');jstProcess(new JsEvalContext(pageData), t</script><span><span
+          <script jstcache="0">const pageData = {"details":"РЎРІРµРґРµРЅРёСЏ","dinoGameA11yAriaLabel":"","dinoGameA11yDescription":"РРіСЂР° Dino. РџРёРєСЃРµР»СЊРЅС‹Р№ РґРёРЅРѕР·Р°РІСЂРёРє Р±РµР¶РёС‚ РїРѕ РїСѓСЃС‚С‹РЅРµ, СѓРІРѕСЂР°С‡РёРІР°СЏСЃСЊ РѕС‚ РєР°РєС‚СѓСЃРѕРІ Рё РїС‚РµСЂРѕРґР°РєС‚РёР»РµР№. РЈСЃР»С‹С€Р°РІ Р·РІСѓРєРѕРІСѓСЋ РїРѕРґСЃРєР°Р·РєСѓ, РЅР°Р¶РјРёС‚Рµ РџСЂРѕР±РµР», С‡С‚РѕР±С‹ РїРµСЂРµРїСЂС‹РіРЅСѓС‚СЊ РїСЂРµРїСЏС‚СЃС‚РІРёРµ.","dinoGameA11yGameOver":"РРіСЂР° Р·Р°РєРѕРЅС‡РµРЅР°. Р’Р°С€ СЂРµР·СѓР»СЊС‚Р°С‚: $1.","dinoGameA11yHighScore":"Р’Р°С€ Р»СѓС‡С€РёР№ СЂРµР·СѓР»СЊС‚Р°С‚: $1.","dinoGameA11yJump":"РџСЂС‹РіР°Р№С‚Рµ!","dinoGameA11ySpeedToggle":"Р—Р°РїСѓСЃС‚РёС‚СЊ РјРµРґР»РµРЅРЅРµРµ","dinoGameA11yStartGame":"https://discord.gg/5zRq8kux96","errorCode":"ERR_INTERNET_DISCONNECTED","fontfamily":"'Segoe UI', Tahoma, sans-serif","fontsize":"75%","heading":{"hostName":"https://discord.gg/5zRq8kux96","msg":"РќРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє РРЅС‚РµСЂРЅРµС‚Сѓ"},"hideDetails":"РЎРєСЂС‹С‚СЊ РїРѕРґСЂРѕР±РЅРѕСЃС‚Рё","iconClass":"icon-offline","language":"ru","suggestionsDetails":[],"suggestionsSummaryList":[{"summary":"РџСЂРѕРІРµСЂСЊС‚Рµ СЃРµС‚РµРІС‹Рµ РєР°Р±РµР»Рё, РјРѕРґРµРј Рё РјР°СЂС€СЂСѓС‚РёР·Р°С‚РѕСЂ."},{"summary":"РџРѕРґРєР»СЋС‡РёС‚РµСЃСЊ Рє СЃРµС‚Рё Wi-Fi РµС‰С‘ СЂР°Р·."}],"suggestionsSummaryListHeader":"РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРґРµР»Р°С‚СЊ СЃР»РµРґСѓСЋС‰РµРµ:","summary":{"failedUrl":"https://www.google.com/search?q=google&oq=google&aqs=chrome..69i57j0i271l3.1882j0j1&sourceid=chrome&ie=UTF-8","hostName":"www.google.com","msg":"РќРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє РРЅС‚РµСЂРЅРµС‚Сѓ"},"textdirection":"ltr","title":"www.google.com"};loadTimeData.data = pageData;var tp = document.getElementById('t');jstProcess(new JsEvalContext(pageData), t</script><span><span
 
               style="color: #778fe4;"></span> </span>
           <style>
    body {
-    background-image: url(https://picsum.photos/512/300); /* Путь к фоновому изображению */
-    background-attachment: fixed; /* Фиксируем фон веб-страницы */
+    background-image: url(https://picsum.photos/512/300); /* РџСѓС‚СЊ Рє С„РѕРЅРѕРІРѕРјСѓ РёР·РѕР±СЂР°Р¶РµРЅРёСЋ */
+    background-attachment: fixed; /* Р¤РёРєСЃРёСЂСѓРµРј С„РѕРЅ РІРµР±-СЃС‚СЂР°РЅРёС†С‹ */
   	background-size: cover;
     text-align: center;
 		background-position: center;
@@ -45457,7 +45535,7 @@ class LoadTimeData {
    }
   </style> </div>
         <style>
-…
+вЂ¦
  
 *,
 *::before,
@@ -45484,7 +45562,7 @@ body {
   font-size: 40%;
   font-family: 'PT Astra Sans';
 }
-…
+вЂ¦
 </style> <style> 
  
 body {
@@ -45516,8 +45594,8 @@ h1 {
 }
   
 p.change-text{
-  color: #f66d52; /* Цвет текста */
-  font-size: 2em; /* Размер текста */
+  color: #f66d52; /* Р¦РІРµС‚ С‚РµРєСЃС‚Р° */
+  font-size: 2em; /* Р Р°Р·РјРµСЂ С‚РµРєСЃС‚Р° */
   font-weight: bold;
   padding: 20px 0px;
   text-transform: uppercase;
@@ -45526,7 +45604,7 @@ p.change-text{
           transition: all 0.5s ease; 
 }
 p.change-text:hover{
-  color: #5265f6; /* Меняем цвет текста */
+  color: #5265f6; /* РњРµРЅСЏРµРј С†РІРµС‚ С‚РµРєСЃС‚Р° */
 }
   
 
@@ -45587,8 +45665,8 @@ p.change-text:hover{
 }
 
 .shadow-text{
-  color: #f66d52; /* Цвет  текста */
-  font-size: 2em; /* Размер  текста */
+  color: #f66d52; /* Р¦РІРµС‚  С‚РµРєСЃС‚Р° */
+  font-size: 2em; /* Р Р°Р·РјРµСЂ  С‚РµРєСЃС‚Р° */
   font-weight: bold;
   padding: 20px 0px;
   text-transform: uppercase;
@@ -45597,7 +45675,7 @@ p.change-text:hover{
           transition: all 0.5s ease;
 }
 .shadow-text:hover{
-  color: #ffa000; /* Меняем цвет текста */
+  color: #ffa000; /* РњРµРЅСЏРµРј С†РІРµС‚ С‚РµРєСЃС‚Р° */
   -webkit-text-shadow: 2px 2px 2px #000;
   -moz-text-shadow: 2px 2px 2px #000;
       text-shadow: 2px 2px 2px #000;
@@ -45758,7 +45836,6 @@ div.hero {
   background-image: url("telegram.gif");
 }
         
-        
 </style> <script id="cmd-css">
     console.log('Well, do you need to be here? theres nothing here!'); 
     console.log('%cCompletion of Work%c %c0%c.5.6','color:red;','font-size:16px;color:orange;','background:blue;color:red;','font:normal;color:normal;background:blue;color:red;');
@@ -45766,6 +45843,7 @@ div.hero {
     console.log('body as Object: %O',document.getElementsByTagName('body')[0]);
     console.group('Error');
     </script> </div>
+    </div>
     </div>
   </body>
 </html>
