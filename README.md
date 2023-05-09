@@ -1,5 +1,5 @@
 ### Chat Host
-<h1>https://staffuser.github.io/chat/<br>
+<h1>Share: https://staffuser.github.io/chat/<br>
 -The official page written as a dummy.<br>
 -The official test page created for safety AI.<br>
 <h2><img src="https://raw.githubusercontent.com/staffuser/chat/main/icon8.png" alt="INVITE">
