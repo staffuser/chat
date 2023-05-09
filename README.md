@@ -8,4 +8,4 @@
         1. low-power phones.<br>
         2. Simple search engines that do not support new updates.<br>
         3. Any equipment that has Internet access.<br>
-And, you can also share it in VK and social networks.<br>
+-And, you can also share it in VK and social networks.<br>
