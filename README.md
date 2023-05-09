@@ -4,5 +4,8 @@
 -The official test page created for safety AI.<br>
 <h2><img src="https://raw.githubusercontent.com/staffuser/chat/main/icon8.png" alt="INVITE">
 <br>-The first version of the project on the safety AI neural network host.<br>
--Сompatible with low-power phones, simple search engines that do not support new updates. <br>
+-Сompatible with:
+  >**low-power phones.** <br>
+  >**Simple search engines that do not support new updates.** <br>
+  >**Any equipment that has Internet access.** <br>
 -And, you can also share it in VK and social networks.<br>
